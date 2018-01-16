@@ -7,7 +7,11 @@
   include "includes/header.php"
   ?>
 
+  <?php if ($_SESSION): ?>
+
     <h1>Welcome, <?php echo $_SESSION['username']; ?></h1>
+    <a href="logout.php">Log out <?php echo $_SESSION['username']; ?></a>
+
     <?php
     if (!isset($_COOKIE[$cookie_name])) {
       echo  '<div id="welcome">
@@ -15,6 +19,9 @@
       </div>';
     }
     ?>
+  <?php else: ?>
+    <h1>Login not detected</h1>
+  <?php endif; ?>
 
   </body>
 </html>

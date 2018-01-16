@@ -3,6 +3,9 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
 
+    $username = mysqli_real_escape_string($connection, $username);
+    $password = mysqli_real_escape_string($connection, $password);
+
     $connection = mysqli_connect('localhost', 'admin2', 'Sg3yIelTvsAmx2RE', 'db_app');
 
     if ($connection) {
@@ -25,8 +28,6 @@
       }
 
       if (!$db_username === $username) {
-        $username = mysqli_real_escape_string($connection, $username);
-        $password = mysqli_real_escape_string($connection, $password);
 
         $hashFormat = "$2y$10$";
         $salt = "Encrypted";
@@ -54,6 +55,8 @@
       echo "<script type='text/javascript'>alert('Invalid username. Username must be less than 32 characters');</script>";
     }
   }
+
+  $title = "Register";
   include "includes/header.php";
 ?>
 
