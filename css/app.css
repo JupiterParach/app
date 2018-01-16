@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  background: #200122;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.login {
+  background: #2c3e50;
+  padding: 20px;
+  width: 320px;
+  border-radius: 2.5px;
+}
+
+.login h3 {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 34px;
+  text-align: center;
+  color: white;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.login a {
+  text-decoration: none;
+}
+
+.login input {
+  padding-left: 5px;
+  height: 35px;
+  border-radius: 5px;
+  margin-top: 6px;
+  display: block;
+  width: 100%;
+}
+.login input[name="login"] {
+  font-size: 20px;
+  font-family: 'Ubuntu Mono', monospace;
+  margin-top: 20px;
+  color: white;
+  background: #2ecc71;
+  border-color: #27ae60;
+  transition: 0.25s;
+}
+.login input[name="login"]:hover {
+  background: #0ce769;
+  border-color: #34d779;
+}
+.login input[name="login"]:active {
+  background: #27ae60;
+  border-color: #2ecc71;
+}
+.login input[name="register"] {
+  font-size: 20px;
+  font-family: 'Ubuntu Mono', monospace;
+  color: white;
+  background: #3498db;
+  border-color: #2980b9;
+  transition: 0.25s;
+}
+.login input[name="register"]:hover {
+  background: #2eabff;
+  border-color: #0f87d7;
+}
+.login input[name="register"]:active {
+  background: #2980b9;
+  border-color: #3498db;
+}

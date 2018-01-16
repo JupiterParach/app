@@ -1,0 +1,13 @@
+body {
+  text-align: center;
+  font-family: Arial;
+}
+#welcome {
+  background: #1abc9c;
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);;
+  color: #fff;
+  line-height: 100px;
+  margin: 0 auto;
+  width: 320px;
+}
