@@ -1,11 +1,12 @@
 <?php
-
 include 'includes/db.php';
 session_start();
 
 if (isset($_POST['login'])) {
   $username = $_POST['username'];
   $password = $_POST['password'];
+
+  $password = hash('sha256', $password);
 
   $username = mysqli_real_escape_string($connection, $username);
   $password = mysqli_real_escape_string($connection, $password);
@@ -22,6 +23,8 @@ if (isset($_POST['login'])) {
     $db_username = $row['username'];
     $db_password = $row['password'];
   }
+
+
   if ($db_username === $username && $db_password === $password) {
     $_SESSION['username'] = $db_username;
     header("Location: welcome.php");
