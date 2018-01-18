@@ -56,11 +56,11 @@
   include "includes/header.php";
 ?>
 
-  <body>
-    <form class="" action="register.php" method="post">
+    <form class="login animated fadeInDown" action="register.php" method="post">
       <input type="text" name="username" placeholder="Username" required>
       <input type="password" name="password" placeholder="Password" required>
-      <input type="submit" name="register" value="Register">
+      <input id="registerPage" type="submit" name="register" value="Register">
+      <a href="login.php"><input type="button" name="back" value="Back"></a>
     </form>
   </body>
 </html>
