@@ -16,6 +16,15 @@ body {
   align-items: center;
   margin: 0;
 }
+#login, #register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gui-container {
+
+}
 
 .login {
   background: #2c3e50;
