@@ -1,5 +1,6 @@
 <?php
   $title = "Register";
+  $bodyID = "register";
   include "includes/header.php";
   if (isset($_POST['register'])) {
     $username = $_POST['username'];

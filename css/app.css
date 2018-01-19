@@ -7,23 +7,33 @@ body, html {
   height: 100%;
 }
 
-body {
-  background: #005AA7;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-}
 #login, #register {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.gui-container {
-
+body {
+  background: #005AA7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: block;
+  margin: 0;
+}
+nav {
+  background: #192027;
+  font-size: 24px;
+  color: #fff;
+  line-height: 120px;
+  padding: 0 20px;
+  text-align: center;
+}
+nav a {
+  color: #fff;
+  float: right;
+}
+nav h1 {
+  margin: 0 auto;
 }
 
 .login {

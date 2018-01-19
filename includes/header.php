@@ -11,4 +11,8 @@ include "includes/functions.php";
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/app.css">
   </head>
-  <body id="<?php echo $bodyID ?>">
+  <?php if (isset($bodyID)): ?>
+    <body id="<?php echo $bodyID; ?>">
+  <?php else: ?>
+    <body>
+  <?php endif; ?>
