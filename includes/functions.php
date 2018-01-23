@@ -85,4 +85,14 @@
       }
     }
   }
+
+  function displayTasks() {
+    global $connection;
+
+    $query = "SELECT title FROM tasks WHERE user_id = {$_SESSION['id']} " ;
+    $result = mysqli_query($connection, $query);
+    while ($row = mysqli_fetch_array($result)) {
+      echo "<li>" . $row['title'] . "</li>";
+    }
+  }
  ?>

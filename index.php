@@ -5,6 +5,10 @@
   setcookie($cookie_name, 'not first time', time() + (86400 * 30), "/");
 
   ?>
+  <nav>
+    <a href="logout.php">Log out</a>
+    <h1><?php echo $_SESSION['username']; ?></h1>
+  </nav>
 
   <?php if (isset($_SESSION['username'])): ?>
     <?php
@@ -14,17 +18,10 @@
         addTask();
       }
     ?>
-    <nav>
-      <a href="logout.php">Log out</a>
-      <h1><?php echo $_SESSION['username']; ?></h1>
-    </nav>
 
     <section>
-      <h2>Todo:</h2>
       <ul>
-        <li>Pay the bills</li>
-        <li>Cook food</li>
-        <li>Walk the dog</li>
+        <?php displayTasks(); ?>
       </ul>
       <form action="index.php" method="post">
         <input type="text" name="taskName">
