@@ -20,6 +20,7 @@
     ?>
 
     <section>
+      <h2>To do list</h2>
       <ul>
         <?php displayTasks(); ?>
       </ul>

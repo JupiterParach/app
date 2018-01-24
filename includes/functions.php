@@ -92,22 +92,34 @@
     $query = "SELECT * FROM tasks WHERE user_id = {$_SESSION['id']} " ;
     $result = mysqli_query($connection, $query);
 
-    // while ($row = mysqli_fetch_array($result)) {
-    // echo "<li>" . $row['title'] . "<a href='?delete=""'>X</a>" . "</li> " . removeButton();
-    // }
-      while ($row = mysqli_fetch_array($result)) : ?>
+    while ($row = mysqli_fetch_array($result)) :
+  ?>
 
-        <li>
-          <?php echo $row['title']; ?>
-          <a href="?delete=<?php echo $row['id']; ?>">X</a>
-        </li>
+      <li>
+        <?php echo $row['title']; ?>
+        <a href="delete.php?taskID=<?php echo $row['id']; ?>">X</a>
+        <a href="update.php?taskID=<?php echo $row['id']; ?>">Y</a>
+      </li>
 
-      <?php endwhile;
+  <?php endwhile;
   }
 
-  function removeButton() {
+  function deleteTask() {
     global $connection;
 
+    $taskID = $_POST['taskID'];
+    $query = "DELETE FROM tasks WHERE id = $taskID";
+    $deleteTaskQuery = mysqli_query($connection, $query);
+    header('location: index.php');
+  }
 
+  function editTask() {
+    global $connection;
+
+    $updatedTask = $_POST['newTask'];
+    $taskID = $_POST['taskID'];
+    $query = "UPDATE tasks SET title='$updatedTask' WHERE id = $taskID";
+    $updateTaskQuery = mysqli_query($connection, $query);
+    header('location: index.php');
   }
  ?>
