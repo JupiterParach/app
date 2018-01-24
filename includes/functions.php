@@ -97,8 +97,8 @@
 
       <li>
         <?php echo $row['title']; ?>
+        <a href="update.php?taskID=<?php echo $row['id']; ?>&taskName=<?php echo $row['title']; ?>">Edit</a>
         <a href="delete.php?taskID=<?php echo $row['id']; ?>">X</a>
-        <a href="update.php?taskID=<?php echo $row['id']; ?>">Y</a>
       </li>
 
   <?php endwhile;
