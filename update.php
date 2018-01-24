@@ -1,16 +1,16 @@
 <?php
-  $title = 'Edit task';
+  if (!empty($_GET['taskName'])) {
+    $currentTask = $_REQUEST['taskName'];
+  }
+  $title = 'Edit "' . $currentTask . '"?';
   include "includes/header.php";
 
   if (!empty($_GET['taskID'])) {
     $taskID = $_REQUEST['taskID'];
   }
 
-  if (!empty($_GET['taskName'])) {
-    $currentTask = $_REQUEST['taskName'];
-  }
 
-  if (!empty($_POST['newTask'])) {
+  if (isset($_POST['updateTask'])) {
     editTask();
   }
 ?>
