@@ -89,10 +89,25 @@
   function displayTasks() {
     global $connection;
 
-    $query = "SELECT title FROM tasks WHERE user_id = {$_SESSION['id']} " ;
+    $query = "SELECT * FROM tasks WHERE user_id = {$_SESSION['id']} " ;
     $result = mysqli_query($connection, $query);
-    while ($row = mysqli_fetch_array($result)) {
-      echo "<li>" . $row['title'] . "</li>";
-    }
+
+    // while ($row = mysqli_fetch_array($result)) {
+    // echo "<li>" . $row['title'] . "<a href='?delete=""'>X</a>" . "</li> " . removeButton();
+    // }
+      while ($row = mysqli_fetch_array($result)) : ?>
+
+        <li>
+          <?php echo $row['title']; ?>
+          <a href="?delete=<?php echo $row['id']; ?>">X</a>
+        </li>
+
+      <?php endwhile;
+  }
+
+  function removeButton() {
+    global $connection;
+
+
   }
  ?>

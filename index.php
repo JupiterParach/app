@@ -5,12 +5,12 @@
   setcookie($cookie_name, 'not first time', time() + (86400 * 30), "/");
 
   ?>
-  <nav>
-    <a href="logout.php">Log out</a>
-    <h1><?php echo $_SESSION['username']; ?></h1>
-  </nav>
 
   <?php if (isset($_SESSION['username'])): ?>
+    <nav>
+      <a href="logout.php">Log out</a>
+      <h1><?php echo $_SESSION['username']; ?></h1>
+    </nav>
     <?php
       $title = $_SESSION['username'];
       include "includes/header.php";

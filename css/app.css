@@ -35,6 +35,19 @@ nav a {
 nav h1 {
   margin: 0 auto;
 }
+section {
+  background: #fff;
+  margin: 100px auto 0;
+  padding: 20px;
+  width: 320px;
+}
+section h1 {
+  margin: 0 auto;
+  text-align: center;
+}
+section ul li a {
+  float: right;
+}
 
 .login {
   background: #2c3e50;
