@@ -8,6 +8,7 @@
 
   <?php if (isset($_SESSION['username'])): ?>
     <nav>
+      <img id="logo" src="assets/img/app-logo-silver.svg" alt="ERROR logo not found" viewBox="0 0 100 100" />
       <a href="logout.php">Log out</a>
       <h1><?php echo $_SESSION['username']; ?></h1>
     </nav>

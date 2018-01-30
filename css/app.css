@@ -49,6 +49,13 @@ section ul li a {
   float: right;
 }
 
+#logo {
+  width: auto;
+  height: 80px;
+  margin: 20px 0;
+  float: left;
+}
+
 .login {
   background: #2c3e50;
   padding: 20px;
