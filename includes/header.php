@@ -13,8 +13,7 @@ include "includes/functions.php";
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/app-logo.svg">
     <link rel="icon" type="image/png" href="assets/img/app-logo.svg" sizes="32x32">
     <link rel="icon" type="image/png" href="assets/img/app-logo.svg" sizes="16x16">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="assets/img/app-logo.svg" color="#5bbad5">
+    <link rel="mask-icon" href="assets/img/app-logo.svg" color="#fff">
   </head>
   <?php if (isset($bodyID)): ?>
     <body id="<?php echo $bodyID; ?>">
