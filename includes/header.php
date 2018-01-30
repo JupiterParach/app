@@ -10,7 +10,7 @@ include "includes/functions.php";
     <link href="https://fonts.googleapis.com/css?family=Raleway|Ubuntu+Mono" rel="stylesheet">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/app.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/app-logo.svg">
     <link rel="icon" type="image/png" href="assets/img/app-logo.svg" sizes="32x32">
     <link rel="icon" type="image/png" href="assets/img/app-logo.svg" sizes="16x16">
     <link rel="manifest" href="/manifest.json">
